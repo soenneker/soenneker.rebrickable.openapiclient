@@ -532,14 +532,14 @@
         },
         "parameters": [
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -563,14 +563,14 @@
         },
         "parameters": [
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1697,14 +1697,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1747,14 +1747,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1807,14 +1807,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
