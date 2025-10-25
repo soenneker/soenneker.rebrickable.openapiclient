@@ -83,7 +83,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         public async Task<Stream> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
@@ -140,7 +140,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
