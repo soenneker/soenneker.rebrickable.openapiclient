@@ -4,7 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Badges;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item;
-using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users._token;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,15 +17,15 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The _token property</summary>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users._token._tokenRequestBuilder _token
-        {
-            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users._token._tokenRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The badges property</summary>
         public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Badges.BadgesRequestBuilder Badges
         {
             get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Badges.BadgesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The token property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenRequestBuilder Token
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
