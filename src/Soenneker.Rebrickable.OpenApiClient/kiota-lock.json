@@ -1,6 +1,6 @@
 {
   "descriptionHash": "4BD666F37B8301F2E9CDBF761D920C2F4D08BB7FAC3C2B8203C87A0DFDB531445E7509856E3B7B516E25C53D9BB8258325309AB3485E92074FACEC3DEDBFE0E9",
-  "descriptionLocation": "../openapi.json",
+  "descriptionLocation": "../../openapi.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.30.0",
   "clientClassName": "RebrickableOpenApiClient",
