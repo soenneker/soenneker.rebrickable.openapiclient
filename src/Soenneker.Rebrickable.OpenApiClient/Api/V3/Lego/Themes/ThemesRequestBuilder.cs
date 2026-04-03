@@ -32,19 +32,6 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes
                 return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes.Item.ThemesItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.themes.item collection</summary>
-        /// <param name="position">A unique integer value identifying this theme.</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes.Item.ThemesItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes.Item.ThemesItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes.Item.ThemesItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Themes.ThemesRequestBuilder"/> and sets the default values.
         /// </summary>

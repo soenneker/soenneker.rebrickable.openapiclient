@@ -32,19 +32,6 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories
                 return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories.Item.Part_categoriesItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.part_categories.item collection</summary>
-        /// <param name="position">A unique integer value identifying this part category.</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories.Item.Part_categoriesItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories.Item.Part_categoriesItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("id", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories.Item.Part_categoriesItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Part_categories.Part_categoriesRequestBuilder"/> and sets the default values.
         /// </summary>
