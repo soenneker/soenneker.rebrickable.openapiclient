@@ -1,16 +1,15 @@
-﻿using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Rebrickable.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class RebrickableOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class RebrickableOpenApiClientTests : HostedUnitTest
 {
-    public RebrickableOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public RebrickableOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
