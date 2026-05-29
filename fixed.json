@@ -681,7 +681,7 @@
         "operationId": "lego-parts-colors-read",
         "parameters": [
           {
-            "name": "color_id",
+            "name": "part_num",
             "in": "path",
             "description": "",
             "required": true,
@@ -690,7 +690,7 @@
             }
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "in": "path",
             "description": "",
             "required": true,
@@ -724,7 +724,7 @@
         "operationId": "lego-parts-colors-sets-list",
         "parameters": [
           {
-            "name": "color_id",
+            "name": "part_num",
             "in": "path",
             "description": "",
             "required": true,
@@ -733,7 +733,7 @@
             }
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "in": "path",
             "description": "",
             "required": true,
@@ -2192,15 +2192,6 @@
         "operationId": "users-partlists-parts-read",
         "parameters": [
           {
-            "name": "color_id",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "part_num",
             "in": "path",
             "description": "",
@@ -2211,6 +2202,15 @@
           },
           {
             "name": "user_token",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "color_id",
             "in": "path",
             "description": "",
             "required": true,
@@ -2259,15 +2259,6 @@
         "operationId": "users-partlists-parts-update",
         "parameters": [
           {
-            "name": "color_id",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "part_num",
             "in": "path",
             "description": "",
@@ -2278,6 +2269,15 @@
           },
           {
             "name": "user_token",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "color_id",
             "in": "path",
             "description": "",
             "required": true,
@@ -2344,15 +2344,6 @@
         "operationId": "users-partlists-parts-delete",
         "parameters": [
           {
-            "name": "color_id",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "part_num",
             "in": "path",
             "description": "",
@@ -2363,6 +2354,15 @@
           },
           {
             "name": "user_token",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "color_id",
             "in": "path",
             "description": "",
             "required": true,
@@ -2994,7 +2994,7 @@
         "operationId": "users-setlists-sets-read",
         "parameters": [
           {
-            "name": "set_num",
+            "name": "user_token",
             "in": "path",
             "description": "",
             "required": true,
@@ -3003,7 +3003,7 @@
             }
           },
           {
-            "name": "user_token",
+            "name": "set_num",
             "in": "path",
             "description": "",
             "required": true,
@@ -3052,7 +3052,7 @@
         "operationId": "users-setlists-sets-update",
         "parameters": [
           {
-            "name": "set_num",
+            "name": "user_token",
             "in": "path",
             "description": "",
             "required": true,
@@ -3061,7 +3061,7 @@
             }
           },
           {
-            "name": "user_token",
+            "name": "set_num",
             "in": "path",
             "description": "",
             "required": true,
@@ -3129,7 +3129,7 @@
         "operationId": "users-setlists-sets-delete",
         "parameters": [
           {
-            "name": "set_num",
+            "name": "user_token",
             "in": "path",
             "description": "",
             "required": true,
@@ -3138,7 +3138,7 @@
             }
           },
           {
-            "name": "user_token",
+            "name": "set_num",
             "in": "path",
             "description": "",
             "required": true,
@@ -3187,7 +3187,7 @@
         "operationId": "users-setlists-sets-partial-update",
         "parameters": [
           {
-            "name": "set_num",
+            "name": "user_token",
             "in": "path",
             "description": "",
             "required": true,
@@ -3196,7 +3196,7 @@
             }
           },
           {
-            "name": "user_token",
+            "name": "set_num",
             "in": "path",
             "description": "",
             "required": true,
