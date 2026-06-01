@@ -19,14 +19,14 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.minifigs.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSet_numItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSet_numItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSetNumItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSetNumItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("set_num", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSet_numItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("setNum", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Minifigs.Item.WithSetNumItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Profile
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\profile
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\profile
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProfileRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Profile
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProfileRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/profile", pathParameters)
+        public ProfileRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/profile", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Profile
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ProfileRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/profile", rawUrl)
+        public ProfileRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/profile", rawUrl)
         {
         }
         /// <summary>

@@ -17,14 +17,14 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.elements.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElementItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElementItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("element_id", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("elementId", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElementItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

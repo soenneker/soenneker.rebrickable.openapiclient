@@ -19,14 +19,14 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.parts.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPart_numItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPart_numItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("part_num", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPart_numItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("partNum", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

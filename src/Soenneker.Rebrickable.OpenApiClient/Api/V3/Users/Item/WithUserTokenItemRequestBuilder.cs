@@ -18,10 +18,10 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithUser_tokenItemRequestBuilder : BaseRequestBuilder
+    public partial class WithUserTokenItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The allparts property</summary>
         public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Allparts.AllpartsRequestBuilder Allparts
@@ -69,19 +69,19 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item
             get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.SetsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUser_tokenItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUserTokenItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUser_tokenItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}", pathParameters)
+        public WithUserTokenItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUser_tokenItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUserTokenItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithUser_tokenItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}", rawUrl)
+        public WithUserTokenItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}", rawUrl)
         {
         }
     }

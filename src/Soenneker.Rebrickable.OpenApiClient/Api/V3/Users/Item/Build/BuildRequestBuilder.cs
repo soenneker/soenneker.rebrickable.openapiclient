@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\build
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\build
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BuildRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.users.item.build.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSetNumItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSetNumItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("set_num", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("setNum", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSetNumItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BuildRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/build", pathParameters)
+        public BuildRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/build", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BuildRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/build", rawUrl)
+        public BuildRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/build", rawUrl)
         {
         }
     }

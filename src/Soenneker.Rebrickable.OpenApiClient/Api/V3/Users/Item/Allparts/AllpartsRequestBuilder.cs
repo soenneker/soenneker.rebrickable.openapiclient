@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Allparts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\allparts
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\allparts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AllpartsRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Allparts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllpartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/allparts{?color_id*,page*,page_size*,part_cat_id*,part_num*}", pathParameters)
+        public AllpartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/allparts{?color_id*,page*,page_size*,part_cat_id*,part_num*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Allparts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AllpartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/allparts{?color_id*,page*,page_size*,part_cat_id*,part_num*}", rawUrl)
+        public AllpartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/allparts{?color_id*,page*,page_size*,part_cat_id*,part_num*}", rawUrl)
         {
         }
         /// <summary>

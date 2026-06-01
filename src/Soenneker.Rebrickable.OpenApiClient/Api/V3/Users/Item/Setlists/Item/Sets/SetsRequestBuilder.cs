@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item;
+using Soenneker.Rebrickable.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -12,21 +13,21 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\setlists\{list_id}\sets
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\setlists\{listId}\sets
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.users.item.setlists.item.sets.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSet_numItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSet_numItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSetNumItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSetNumItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("set_num", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSet_numItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("setNum", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item.WithSetNumItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -34,7 +35,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/setlists/{list_id}/sets{?ordering*,page*,page_size*}", pathParameters)
+        public SetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/setlists/{listId}/sets{?ordering*,page*,page_size*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +43,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/setlists/{list_id}/sets{?ordering*,page*,page_size*}", rawUrl)
+        public SetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/setlists/{listId}/sets{?ordering*,page*,page_size*}", rawUrl)
         {
         }
         /// <summary>
@@ -71,11 +72,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.SetsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.SetsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -109,11 +110,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.SetsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.SetsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

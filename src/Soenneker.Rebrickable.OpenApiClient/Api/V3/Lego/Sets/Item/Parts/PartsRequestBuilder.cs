@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\lego\sets\{set_num}\parts
+    /// Builds and executes requests for operations under \api\v3\lego\sets\{setNum}\parts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PartsRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{set_num}/parts{?page*,page_size*}", pathParameters)
+        public PartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}/parts{?page*,page_size*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{set_num}/parts{?page*,page_size*}", rawUrl)
+        public PartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}/parts{?page*,page_size*}", rawUrl)
         {
         }
         /// <summary>

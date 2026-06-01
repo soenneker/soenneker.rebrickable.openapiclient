@@ -12,21 +12,21 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\lego\parts\{part_num}\colors
+    /// Builds and executes requests for operations under \api\v3\lego\parts\{partNum}\colors
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ColorsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.lego.parts.item.colors.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("color_id", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("colorId", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -34,7 +34,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ColorsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{part_num}/colors{?ordering*,page*,page_size*}", pathParameters)
+        public ColorsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}/colors{?ordering*,page*,page_size*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ColorsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{part_num}/colors{?ordering*,page*,page_size*}", rawUrl)
+        public ColorsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}/colors{?ordering*,page*,page_size*}", rawUrl)
         {
         }
         /// <summary>

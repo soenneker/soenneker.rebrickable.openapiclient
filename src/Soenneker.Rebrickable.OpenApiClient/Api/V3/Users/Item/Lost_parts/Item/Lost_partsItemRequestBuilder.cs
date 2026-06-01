@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\lost_parts\{id}
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\lost_parts\{id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Lost_partsItemRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Lost_partsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/lost_parts/{id}{?ordering*}", pathParameters)
+        public Lost_partsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/lost_parts/{id}{?ordering*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Lost_partsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/lost_parts/{id}{?ordering*}", rawUrl)
+        public Lost_partsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/lost_parts/{id}{?ordering*}", rawUrl)
         {
         }
         /// <summary>

@@ -5,43 +5,33 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists
+namespace Soenneker.Rebrickable.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PartlistsPostRequestBody : IAdditionalDataHolder, IParsable
+    public partial class UsersSetsUpdateXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The is_buildable property</summary>
-        public bool? IsBuildable { get; set; }
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The num_parts property</summary>
-        public int? NumParts { get; set; }
+        /// <summary>The quantity property</summary>
+        public int? Quantity { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.PartlistsPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
-        public PartlistsPostRequestBody()
+        public UsersSetsUpdateXWwwFormUrlencodedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.PartlistsPostRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.PartlistsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.PartlistsPostRequestBody();
+            return new global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,9 +41,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_buildable", n => { IsBuildable = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "num_parts", n => { NumParts = n.GetIntValue(); } },
+                { "quantity", n => { Quantity = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -63,9 +51,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("is_buildable", IsBuildable);
-            writer.WriteStringValue("name", Name);
-            writer.WriteIntValue("num_parts", NumParts);
+            writer.WriteIntValue("quantity", Quantity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

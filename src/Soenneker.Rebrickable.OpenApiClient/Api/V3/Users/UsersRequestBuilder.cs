@@ -29,14 +29,14 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users
         }
         /// <summary>Gets an item from the Soenneker.Rebrickable.OpenApiClient.api.v3.users.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUser_tokenItemRequestBuilder"/></returns>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUser_tokenItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUserTokenItemRequestBuilder"/></returns>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUserTokenItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_token", position);
-                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUser_tokenItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userToken", position);
+                return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.WithUserTokenItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Parts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\parts
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\parts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PartsRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Parts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/parts{?color_id*,ordering*,page*,page_size*,part_cat_id*,part_num*,search*}", pathParameters)
+        public PartsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/parts{?color_id*,ordering*,page*,page_size*,part_cat_id*,part_num*,search*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Parts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/parts{?color_id*,ordering*,page*,page_size*,part_cat_id*,part_num*,search*}", rawUrl)
+        public PartsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/parts{?color_id*,ordering*,page*,page_size*,part_cat_id*,part_num*,search*}", rawUrl)
         {
         }
         /// <summary>

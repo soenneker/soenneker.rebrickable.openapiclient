@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Rebrickable.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,25 +12,25 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\partlists\{list_id}\parts\{part_num}\{color_id}
+    /// Builds and executes requests for operations under \api\v3\users\{userToken}\partlists\{listId}\parts\{partNum}\{colorId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithColor_ItemRequestBuilder : BaseRequestBuilder
+    public partial class WithColorItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithColor_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/partlists/{list_id}/parts/{part_num}/{color_id}{?ordering*}", pathParameters)
+        public WithColorItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/partlists/{listId}/parts/{partNum}/{colorId}{?ordering*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithColor_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/partlists/{list_id}/parts/{part_num}/{color_id}{?ordering*}", rawUrl)
+        public WithColorItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/partlists/{listId}/parts/{partNum}/{colorId}{?ordering*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,11 +40,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -57,11 +58,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -76,11 +77,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -94,11 +95,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -113,11 +114,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -133,11 +134,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_PutRequestBody body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder.WithColor_ItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder.WithColorItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -150,17 +151,17 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColor_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.Parts.Item.Item.WithColorItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// Delete a Part from the Part List.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithColor_ItemRequestBuilderDeleteQueryParameters 
+        public partial class WithColorItemRequestBuilderDeleteQueryParameters 
         {
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,7 +178,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// Get details about a specific Part in the Part List.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithColor_ItemRequestBuilderGetQueryParameters 
+        public partial class WithColorItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -194,7 +195,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.Item.P
         /// Replace an existing Part&apos;s details in the Part List.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithColor_ItemRequestBuilderPutQueryParameters 
+        public partial class WithColorItemRequestBuilderPutQueryParameters 
         {
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

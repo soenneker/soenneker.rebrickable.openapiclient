@@ -5,43 +5,35 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item
+namespace Soenneker.Rebrickable.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class WithList_PutRequestBody : IAdditionalDataHolder, IParsable
+    public partial class UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The is_buildable property</summary>
-        public bool? IsBuildable { get; set; }
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The num_sets property</summary>
-        public int? NumSets { get; set; }
+        /// <summary>The include_spares property</summary>
+        public bool? IncludeSpares { get; set; }
+        /// <summary>The quantity property</summary>
+        public int? Quantity { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PutRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
-        public WithList_PutRequestBody()
+        public UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PutRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PutRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PutRequestBody();
+            return new global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,9 +43,8 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_buildable", n => { IsBuildable = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "num_sets", n => { NumSets = n.GetIntValue(); } },
+                { "include_spares", n => { IncludeSpares = n.GetBoolValue(); } },
+                { "quantity", n => { Quantity = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -63,9 +54,8 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("is_buildable", IsBuildable);
-            writer.WriteStringValue("name", Name);
-            writer.WriteIntValue("num_sets", NumSets);
+            writer.WriteBoolValue("include_spares", IncludeSpares);
+            writer.WriteIntValue("quantity", Quantity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

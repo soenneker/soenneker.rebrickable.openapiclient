@@ -3,37 +3,43 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item
+namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\users\{user_token}\build\{set_num}
+    /// Builds and executes requests for operations under \api\v3\lego\parts\{partNum}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithSet_numItemRequestBuilder : BaseRequestBuilder
+    public partial class WithPartNumItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The colors property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.ColorsRequestBuilder Colors
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.ColorsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSet_numItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/build/{set_num}", pathParameters)
+        public WithPartNumItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithSet_numItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{user_token}/build/{set_num}", rawUrl)
+        public WithPartNumItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}", rawUrl)
         {
         }
         /// <summary>
-        /// Find out how many parts the user needs to build the specified Set.The user&apos;s default Build Settings will be used to calculate a Build Match % using their LEGO Collection of Setsand Parts.
+        /// Get details about a specific Part.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +57,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Find out how many parts the user needs to build the specified Set.The user&apos;s default Build Settings will be used to calculate a Build Match % using their LEGO Collection of Setsand Parts.
+        /// Get details about a specific Part.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -72,11 +78,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Build.Item.WithSet_numItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.WithPartNumItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

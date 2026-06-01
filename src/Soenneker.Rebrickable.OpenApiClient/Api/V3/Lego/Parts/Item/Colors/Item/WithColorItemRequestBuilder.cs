@@ -12,10 +12,10 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\lego\parts\{part_num}\colors\{color_id}
+    /// Builds and executes requests for operations under \api\v3\lego\parts\{partNum}\colors\{colorId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithColor_ItemRequestBuilder : BaseRequestBuilder
+    public partial class WithColorItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The sets property</summary>
         public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.Sets.SetsRequestBuilder Sets
@@ -23,19 +23,19 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item
             get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.Sets.SetsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithColor_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{part_num}/colors/{color_id}", pathParameters)
+        public WithColorItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}/colors/{colorId}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithColor_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{part_num}/colors/{color_id}", rawUrl)
+        public WithColorItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/parts/{partNum}/colors/{colorId}", rawUrl)
         {
         }
         /// <summary>
@@ -78,11 +78,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColor_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Parts.Item.Colors.Item.WithColorItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

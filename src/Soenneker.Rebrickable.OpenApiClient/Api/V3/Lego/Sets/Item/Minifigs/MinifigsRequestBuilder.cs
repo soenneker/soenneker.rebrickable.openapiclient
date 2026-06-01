@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\lego\sets\{set_num}\minifigs
+    /// Builds and executes requests for operations under \api\v3\lego\sets\{setNum}\minifigs
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MinifigsRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MinifigsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{set_num}/minifigs{?page*,page_size*}", pathParameters)
+        public MinifigsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}/minifigs{?page*,page_size*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MinifigsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{set_num}/minifigs{?page*,page_size*}", rawUrl)
+        public MinifigsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}/minifigs{?page*,page_size*}", rawUrl)
         {
         }
         /// <summary>

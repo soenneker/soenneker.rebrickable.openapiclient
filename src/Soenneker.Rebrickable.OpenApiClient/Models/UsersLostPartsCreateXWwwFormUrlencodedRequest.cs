@@ -5,47 +5,35 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token
+namespace Soenneker.Rebrickable.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TokenPostRequestBody : IAdditionalDataHolder, IParsable
+    public partial class UsersLostPartsCreateXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Password of user</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Password { get; set; }
-#nullable restore
-#else
-        public string Password { get; set; }
-#endif
-        /// <summary>Username (or email) of user</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Username { get; set; }
-#nullable restore
-#else
-        public string Username { get; set; }
-#endif
+        /// <summary>The inv_part_id property</summary>
+        public int? InvPartId { get; set; }
+        /// <summary>The lost_quantity property</summary>
+        public int? LostQuantity { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenPostRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersLostPartsCreateXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
-        public TokenPostRequestBody()
+        public UsersLostPartsCreateXWwwFormUrlencodedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenPostRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersLostPartsCreateXWwwFormUrlencodedRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Rebrickable.OpenApiClient.Models.UsersLostPartsCreateXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token.TokenPostRequestBody();
+            return new global::Soenneker.Rebrickable.OpenApiClient.Models.UsersLostPartsCreateXWwwFormUrlencodedRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +43,8 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "password", n => { Password = n.GetStringValue(); } },
-                { "username", n => { Username = n.GetStringValue(); } },
+                { "inv_part_id", n => { InvPartId = n.GetIntValue(); } },
+                { "lost_quantity", n => { LostQuantity = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +54,8 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Token
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("password", Password);
-            writer.WriteStringValue("username", Username);
+            writer.WriteIntValue("inv_part_id", InvPartId);
+            writer.WriteIntValue("lost_quantity", LostQuantity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -5,11 +5,11 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item
+namespace Soenneker.Rebrickable.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class WithList_PatchRequestBody : IAdditionalDataHolder, IParsable
+    public partial class UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +27,21 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item
         /// <summary>The num_sets property</summary>
         public int? NumSets { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PatchRequestBody"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
-        public WithList_PatchRequestBody()
+        public UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PatchRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PatchRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.WithList_PatchRequestBody();
+            return new global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest();
         }
         /// <summary>
         /// The deserialization information for the current model

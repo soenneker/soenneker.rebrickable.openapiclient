@@ -3,37 +3,61 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts;
+using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Sets;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item
+namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v3\lego\elements\{element_id}
+    /// Builds and executes requests for operations under \api\v3\lego\sets\{setNum}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithElement_ItemRequestBuilder : BaseRequestBuilder
+    public partial class WithSetNumItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The alternates property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates.AlternatesRequestBuilder Alternates
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates.AlternatesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The minifigs property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs.MinifigsRequestBuilder Minifigs
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs.MinifigsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The parts property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts.PartsRequestBuilder Parts
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts.PartsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The sets property</summary>
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Sets.SetsRequestBuilder Sets
+        {
+            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Sets.SetsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.WithSetNumItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithElement_ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/elements/{element_id}", pathParameters)
+        public WithSetNumItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.WithSetNumItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithElement_ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/elements/{element_id}", rawUrl)
+        public WithSetNumItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/lego/sets/{setNum}", rawUrl)
         {
         }
         /// <summary>
-        /// Get details about a specific Element ID.
+        /// Get details for a specific Set.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +75,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get details about a specific Element ID.
+        /// Get details for a specific Set.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -72,11 +96,11 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.WithSetNumItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.WithSetNumItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Elements.Item.WithElement_ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.WithSetNumItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }
