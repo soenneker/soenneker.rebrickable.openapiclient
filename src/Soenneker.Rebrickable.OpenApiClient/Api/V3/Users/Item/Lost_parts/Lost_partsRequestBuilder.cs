@@ -35,7 +35,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Lost_partsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/lost_parts{?ordering*,page*,page_size*}", pathParameters)
+        public Lost_partsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Lost_partsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/lost_parts{?ordering*,page*,page_size*}", rawUrl)
+        public Lost_partsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

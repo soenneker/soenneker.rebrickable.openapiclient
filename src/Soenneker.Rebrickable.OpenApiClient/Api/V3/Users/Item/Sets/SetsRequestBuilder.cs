@@ -41,7 +41,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/sets{?max_parts*,max_year*,min_parts*,min_year*,ordering*,page*,page_size*,search*,set_num*,theme_id*}", pathParameters)
+        public SetsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/users/{userToken}/sets{?max_parts*,max_year*,min_parts*,min_year*,ordering*,page*,page_size*,search*,set_num*,theme_id*}", rawUrl)
+        public SetsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
