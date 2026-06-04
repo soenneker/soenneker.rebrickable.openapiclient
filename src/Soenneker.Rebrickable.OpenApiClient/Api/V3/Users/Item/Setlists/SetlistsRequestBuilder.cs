@@ -97,7 +97,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.SetlistsRequestBuilder.SetlistsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/users/{userToken}/setlists{?page*,page_size*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             return requestInfo;
@@ -118,7 +118,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/users/{userToken}/setlists", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);

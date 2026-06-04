@@ -97,7 +97,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts.Lost_partsRequestBuilder.Lost_partsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/users/{userToken}/lost_parts{?ordering*,page*,page_size*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             return requestInfo;
@@ -118,7 +118,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/users/{userToken}/lost_parts", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);

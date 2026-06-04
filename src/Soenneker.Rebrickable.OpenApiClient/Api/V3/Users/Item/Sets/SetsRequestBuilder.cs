@@ -103,7 +103,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.SetsRequestBuilder.SetsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/users/{userToken}/sets{?max_parts*,max_year*,min_parts*,min_year*,ordering*,page*,page_size*,search*,set_num*,theme_id*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/users/{userToken}/sets", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);

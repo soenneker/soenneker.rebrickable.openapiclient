@@ -97,7 +97,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists.PartlistsRequestBuilder.PartlistsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/users/{userToken}/partlists{?page*,page_size*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             return requestInfo;
@@ -118,7 +118,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Partlists
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/api/v3/users/{userToken}/partlists", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
