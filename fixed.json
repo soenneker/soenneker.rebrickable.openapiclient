@@ -1879,47 +1879,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "users"
-        ],
-        "summary": "Delete a Part List and all it's Parts.",
-        "description": "Delete a Part List and all it's Parts.",
-        "operationId": "UsersPartlistsDelete",
-        "parameters": [
-          {
-            "name": "userToken",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
-            }
-          }
-        }
-      },
       "patch": {
         "tags": [
           "users"
@@ -1958,6 +1917,47 @@
         },
         "responses": {
           "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Delete a Part List and all it's Parts.",
+        "description": "Delete a Part List and all it's Parts.",
+        "operationId": "UsersPartlistsDelete",
+        "parameters": [
+          {
+            "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
             "description": "",
             "content": {
               "application/octet-stream": {
@@ -2607,47 +2607,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "users"
-        ],
-        "summary": "Delete a Set List and all it's Sets.",
-        "description": "Delete a Set List and all it's Sets.",
-        "operationId": "UsersSetlistsDelete",
-        "parameters": [
-          {
-            "name": "userToken",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
-            }
-          }
-        }
-      },
       "patch": {
         "tags": [
           "users"
@@ -2686,6 +2645,47 @@
         },
         "responses": {
           "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Delete a Set List and all it's Sets.",
+        "description": "Delete a Set List and all it's Sets.",
+        "operationId": "UsersSetlistsDelete",
+        "parameters": [
+          {
+            "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
             "description": "",
             "content": {
               "application/octet-stream": {
@@ -2942,64 +2942,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "users"
-        ],
-        "summary": "Delete a Set from the Set List.",
-        "description": "Delete a Set from the Set List.",
-        "operationId": "UsersSetlistsSetsDelete",
-        "parameters": [
-          {
-            "name": "setNum",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "userToken",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ordering",
-            "in": "query",
-            "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
-            }
-          }
-        }
-      },
       "patch": {
         "tags": [
           "users"
@@ -3055,6 +2997,64 @@
         },
         "responses": {
           "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Delete a Set from the Set List.",
+        "description": "Delete a Set from the Set List.",
+        "operationId": "UsersSetlistsSetsDelete",
+        "parameters": [
+          {
+            "name": "setNum",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordering",
+            "in": "query",
+            "description": "Which field to use when ordering the results.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
             "description": "",
             "content": {
               "application/octet-stream": {
