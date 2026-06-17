@@ -1439,7 +1439,7 @@
         "operationId": "UsersBuildRead",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -1448,7 +1448,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1581,7 +1581,7 @@
         "operationId": "UsersLostPartsDelete",
         "parameters": [
           {
-            "name": "id",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1590,7 +1590,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "id",
             "in": "path",
             "description": "",
             "required": true,
@@ -2107,7 +2107,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "colorId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2116,7 +2116,7 @@
             }
           },
           {
-            "name": "colorId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2174,7 +2174,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "colorId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2183,7 +2183,7 @@
             }
           },
           {
-            "name": "colorId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2250,7 +2250,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "colorId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2259,7 +2259,7 @@
             }
           },
           {
-            "name": "colorId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2826,7 +2826,7 @@
         "operationId": "UsersSetlistsSetsRead",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2835,7 +2835,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2884,7 +2884,7 @@
         "operationId": "UsersSetlistsSetsUpdate",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2893,7 +2893,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2951,7 +2951,7 @@
         "operationId": "UsersSetlistsSetsPartialUpdate",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2960,7 +2960,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3018,7 +3018,7 @@
         "operationId": "UsersSetlistsSetsDelete",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3027,7 +3027,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3276,7 +3276,7 @@
         "operationId": "UsersSetsRead",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3285,7 +3285,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3381,7 +3381,7 @@
         "operationId": "UsersSetsUpdate",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3390,7 +3390,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3495,7 +3495,7 @@
         "operationId": "UsersSetsDelete",
         "parameters": [
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3504,7 +3504,7 @@
             }
           },
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
