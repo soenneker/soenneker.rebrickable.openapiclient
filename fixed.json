@@ -1,14 +1,13 @@
 {
-  "openapi": "3.0.4",
+  "swagger": "2.0",
   "info": {
     "title": "",
     "description": "",
     "version": ""
   },
-  "servers": [
-    {
-      "url": "https://rebrickable.com"
-    }
+  "host": "rebrickable.com",
+  "schemes": [
+    "https"
   ],
   "paths": {
     "/api/v3/lego/colors": {
@@ -19,42 +18,35 @@
         "summary": "Get a list of all Colors.",
         "description": "Get a list of all Colors.",
         "operationId": "LegoColorsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -68,35 +60,30 @@
         "summary": "Get details about a specific Color.",
         "description": "Get details about a specific Color.",
         "operationId": "LegoColorsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "id",
             "in": "path",
+            "name": "id",
             "description": "A unique value identifying this color.",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -110,27 +97,24 @@
         "summary": "Get details about a specific Element ID.",
         "description": "Get details about a specific Element ID.",
         "operationId": "LegoElementsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "elementId",
             "in": "path",
+            "name": "elementId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -144,82 +128,65 @@
         "summary": "Get a list of Minifigs.",
         "description": "Get a list of Minifigs.",
         "operationId": "LegoMinifigsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "in_set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "in_theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -233,27 +200,24 @@
         "summary": "Get details for a specific Minifig.",
         "description": "Get details for a specific Minifig.",
         "operationId": "LegoMinifigsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -267,43 +231,36 @@
         "summary": "Get a list of all Inventory Parts in this Minifig.",
         "description": "Get a list of all Inventory Parts in this Minifig.\n\nOptional parameter inc_part_details=1 can be used to return additional part fields, the same as for a single part lookup.",
         "operationId": "LegoMinifigsPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -317,51 +274,42 @@
         "summary": "Get a list of Sets a Minifig has appeared in.",
         "description": "Get a list of Sets a Minifig has appeared in.",
         "operationId": "LegoMinifigsSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -375,42 +323,35 @@
         "summary": "Get a list of all Part Categories.",
         "description": "Get a list of all Part Categories.",
         "operationId": "LegoPartCategoriesList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -424,35 +365,30 @@
         "summary": "Get details about a specific Part Category.",
         "description": "Get details about a specific Part Category.",
         "operationId": "LegoPartCategoriesRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "id",
             "in": "path",
+            "name": "id",
             "description": "A unique integer value identifying this part category.",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -466,114 +402,89 @@
         "summary": "Get a list of Parts.",
         "description": "Get a list of Parts.\n\nOptional parameter inc_part_details=1 can be used to return additional fields, the same as for a single part lookup.\n\nThe optional part_nums filter parameter should be a comma separated list of part_num without spaces.\n\nOptionally filter by one or more of the below query parameters.",
         "operationId": "LegoPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "part_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "part_nums",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "part_cat_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "color_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "bricklink_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "brickowl_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "lego_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "ldraw_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -587,27 +498,24 @@
         "summary": "Get details about a specific Part.",
         "description": "Get details about a specific Part.",
         "operationId": "LegoPartsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "partNum",
             "in": "path",
+            "name": "partNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -621,51 +529,42 @@
         "summary": "Get a list of all Colors a Part has appeared in.",
         "description": "Get a list of all Colors a Part has appeared in.",
         "operationId": "LegoPartsColorsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "partNum",
             "in": "path",
+            "name": "partNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -679,36 +578,31 @@
         "summary": "Get details about a specific Part/Color combination.",
         "description": "Get details about a specific Part/Color combination.",
         "operationId": "LegoPartsColorsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "partNum",
             "in": "path",
+            "name": "partNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "colorId",
             "in": "path",
+            "name": "colorId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -722,60 +616,49 @@
         "summary": "Get a list of all Sets the Part/Color combination has appeard in.",
         "description": "Get a list of all Sets the Part/Color combination has appeard in.",
         "operationId": "LegoPartsColorsSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "partNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "colorId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -789,90 +672,71 @@
         "summary": "Get a list of Sets, optionally filtered by any of the below parameters.",
         "description": "Get a list of Sets, optionally filtered by any of the below parameters.",
         "operationId": "LegoSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "min_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -886,27 +750,24 @@
         "summary": "Get details for a specific Set.",
         "description": "Get details for a specific Set.",
         "operationId": "LegoSetsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -920,51 +781,42 @@
         "summary": "Get a list of MOCs which are Alternate Builds of a specific Set - i.e. all parts in the MOC can",
         "description": "Get a list of MOCs which are Alternate Builds of a specific Set - i.e. all parts in the MOC can\nbe found in the Set.",
         "operationId": "LegoSetsAlternatesList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -978,43 +830,36 @@
         "summary": "Get a list of all Inventory Minifigs in this Set.",
         "description": "Get a list of all Inventory Minifigs in this Set.",
         "operationId": "LegoSetsMinifigsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1028,43 +873,36 @@
         "summary": "Get a list of all Inventory Parts in this Set.",
         "description": "Get a list of all Inventory Parts in this Set.\n\nOptional parameter inc_part_details=1 can be used to return additional part fields, the same as for a single part lookup.\nOptional parameter inc_minifig_parts=1 can be used to include minifig parts in this call.\nOptional parameter inc_color_details=0 can be used to prevent color field expansion and reduce response sizes.",
         "operationId": "LegoSetsPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1078,43 +916,36 @@
         "summary": "Get a list of all Inventory Sets in this Set.",
         "description": "Get a list of all Inventory Sets in this Set.",
         "operationId": "LegoSetsSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1128,42 +959,35 @@
         "summary": "Return all Themes",
         "description": "Return all Themes",
         "operationId": "LegoThemesList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1177,35 +1001,30 @@
         "summary": "Return details for a specific Theme",
         "description": "Return details for a specific Theme",
         "operationId": "LegoThemesRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "id",
             "in": "path",
+            "name": "id",
             "description": "A unique integer value identifying this theme.",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1217,16 +1036,15 @@
           "swagger"
         ],
         "operationId": "SwaggerList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1240,25 +1058,18 @@
         "summary": "Generate a User Token to be used for authorising user account actions in subsequent calls. Username can be either",
         "description": "Generate a User Token to be used for authorising user account actions in subsequent calls. Username can be either\n the actual username or the user's email address.",
         "operationId": "UsersTokenCreate",
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersTokenCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1272,42 +1083,35 @@
         "summary": "Get a list of all the available Badges",
         "description": "Get a list of all the available Badges",
         "operationId": "UsersBadgesList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1321,35 +1125,30 @@
         "summary": "Get details about a specific Badge",
         "description": "Get details about a specific Badge",
         "operationId": "UsersBadgesRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "id",
             "in": "path",
+            "name": "id",
             "description": "A unique integer value identifying this badge.",
             "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1363,67 +1162,54 @@
         "summary": "Get a list of all the Parts in all the user's Part Lists as well as the Parts inside Sets in the user's Set Lists.",
         "description": "Get a list of all the Parts in all the user's Part Lists as well as the Parts inside Sets in the user's Set Lists.\n\n###WARNING this call is very resource intensive, do not overuse it!\n\nOptionally, filter by one or more of the below query parameters.",
         "operationId": "UsersAllpartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "part_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "part_cat_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
-            "name": "color_id",
             "in": "query",
+            "name": "color_id",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1437,36 +1223,31 @@
         "summary": "Find out how many parts the user needs to build the specified Set.",
         "description": "Find out how many parts the user needs to build the specified Set.\n\nThe user's default Build Settings will be used to calculate a Build Match % using their LEGO Collection of Sets\nand Parts.",
         "operationId": "UsersBuildRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "setNum",
             "in": "path",
+            "name": "setNum",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1480,51 +1261,42 @@
         "summary": "Get a list of all the Lost Parts from the user's LEGO collection.",
         "description": "Get a list of all the Lost Parts from the user's LEGO collection.\n\nOptionally, filter by one or more of the below query parameters.",
         "operationId": "UsersLostPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1536,36 +1308,27 @@
         "summary": "Add one or more Lost Parts to the user.",
         "description": "\"Add one or more Lost Parts to the user.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json'). The inv_part_id\nfield can be retrieved from the Set's inventory.\ne.g:\n`[{\\\"inv_part_id\\\": 806698, \\\"lost_quantity\\\": 3},\n  {\\\"inv_part_id\\\": 256007, \\\"lost_quantity\\\": 2}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.\"",
         "operationId": "UsersLostPartsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersLostPartsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1579,44 +1342,37 @@
         "summary": "Remove the Lost Part from the user.",
         "description": "Remove the Lost Part from the user.",
         "operationId": "UsersLostPartsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "id",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1630,67 +1386,54 @@
         "summary": "Get a list of all the Minifigs in all the user's Sets. Note that this is a read-only list as Minifigs are",
         "description": "Get a list of all the Minifigs in all the user's Sets. Note that this is a read-only list as Minifigs are\nautomatically determined by the Sets in the user's Set Lists.\n\nMinifigs that were manually added to Set Lists can be retrieved via the\nGET /api/v3/users/{user_token}/sets/ endpoint.\n\nOptionally, filter by one or more of the below query parameters.",
         "operationId": "UsersMinifigsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "fig_set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1704,43 +1447,36 @@
         "summary": "Get a list of all the user's Part Lists.",
         "description": "Get a list of all the user's Part Lists.",
         "operationId": "UsersPartlistsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1752,36 +1488,27 @@
         "summary": "Add a new Part List.",
         "description": "Add a new Part List.",
         "operationId": "UsersPartlistsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersPartlistsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1795,36 +1522,31 @@
         "summary": "Get details about a specific Part List.",
         "description": "Get details about a specific Part List.",
         "operationId": "UsersPartlistsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1836,45 +1558,34 @@
         "summary": "Replace an existing Part List's details.",
         "description": "Replace an existing Part List's details.",
         "operationId": "UsersPartlistsUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersPartlistsUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1886,45 +1597,34 @@
         "summary": "Update an existing Part List's details.",
         "description": "Update an existing Part List's details.",
         "operationId": "UsersPartlistsPartialUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersPartlistsPartialUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1936,36 +1636,31 @@
         "summary": "Delete a Part List and all it's Parts.",
         "description": "Delete a Part List and all it's Parts.",
         "operationId": "UsersPartlistsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -1979,60 +1674,49 @@
         "summary": "Get a list of all the Parts in a specific Part List.",
         "description": "Get a list of all the Parts in a specific Part List.\n\nOptional parameter inc_part_details=1 can be used to return additional part fields, the same as for a single part lookup.\nOptional parameter inc_color_details=0 can be used to prevent color field expansion and reduce response sizes.",
         "operationId": "UsersPartlistsPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2044,45 +1728,34 @@
         "summary": "Add one or more Parts to the Part List.",
         "description": "\"Add one or more Parts to the Part List.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"part_num\\\":\\\"3001\\\", \\\"color_id\\\": 1, \\\"quantity\\\": 10},\n {\\\"part_num\\\":\\\"3001\\\", \\\"color_id\\\": 2, \\\"quantity\\\": 20},\n {\\\"part_num\\\":\\\"3002\\\", \\\"color_id\\\": 14, \\\"quantity\\\": 30}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.\"",
         "operationId": "UsersPartlistsPartsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersPartlistsPartsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2096,62 +1769,51 @@
         "summary": "Get details about a specific Part in the Part List.",
         "description": "Get details about a specific Part in the Part List.",
         "operationId": "UsersPartlistsPartsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "partNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "colorId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2163,71 +1825,54 @@
         "summary": "Replace an existing Part's details in the Part List.",
         "description": "Replace an existing Part's details in the Part List.",
         "operationId": "UsersPartlistsPartsUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "partNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "colorId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2239,62 +1884,51 @@
         "summary": "Delete a Part from the Part List.",
         "description": "Delete a Part from the Part List.",
         "operationId": "UsersPartlistsPartsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "partNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "colorId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2308,83 +1942,66 @@
         "summary": "Get a list of all the Parts in all the user's Part Lists.",
         "description": "Get a list of all the Parts in all the user's Part Lists.\n\nOptional parameter inc_part_details=1 can be used to return additional part fields, the same as for a single part lookup.\n\n###Set List logic\nParts appearing in multiple Part Lists will be listed multiple times.\n\nOptionally, filter by one or more of the below query parameters.",
         "operationId": "UsersPartsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "part_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "part_cat_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "color_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2398,27 +2015,24 @@
         "summary": "Get details about a specific user.",
         "description": "Get details about a specific user.",
         "operationId": "UsersProfileRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2432,43 +2046,36 @@
         "summary": "Get a list of all the user's Set Lists.",
         "description": "Get a list of all the user's Set Lists.",
         "operationId": "UsersSetlistsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "page_size",
             "in": "query",
+            "name": "page_size",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2480,36 +2087,27 @@
         "summary": "Add a new Set List.",
         "description": "Add a new Set List.",
         "operationId": "UsersSetlistsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2523,36 +2121,31 @@
         "summary": "Get details about a specific Set List.",
         "description": "Get details about a specific Set List.",
         "operationId": "UsersSetlistsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2564,45 +2157,34 @@
         "summary": "Replace an existing Set List's details.",
         "description": "Replace an existing Set List's details.",
         "operationId": "UsersSetlistsUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2614,45 +2196,34 @@
         "summary": "Update an existing Set List's details.",
         "description": "Update an existing Set List's details.",
         "operationId": "UsersSetlistsPartialUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2664,36 +2235,31 @@
         "summary": "Delete a Set List and all it's Sets.",
         "description": "Delete a Set List and all it's Sets.",
         "operationId": "UsersSetlistsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2707,60 +2273,49 @@
         "summary": "Get a list of all the Sets in a specific Set List.",
         "description": "Get a list of all the Sets in a specific Set List.",
         "operationId": "UsersSetlistsSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2772,45 +2327,34 @@
         "summary": "Add one or more Sets to the Set List. Existing Sets are unaffected.",
         "description": "\"Add one or more Sets to the Set List. Existing Sets are unaffected.\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.\"",
         "operationId": "UsersSetlistsSetsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "listId",
             "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsSetsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2824,53 +2368,44 @@
         "summary": "Get details about a specific Set in the Set List.",
         "description": "Get details about a specific Set in the Set List.",
         "operationId": "UsersSetlistsSetsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2882,62 +2417,47 @@
         "summary": "Replace an existing Set's details in the Set List.",
         "description": "Replace an existing Set's details in the Set List.",
         "operationId": "UsersSetlistsSetsUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -2949,62 +2469,47 @@
         "summary": "Update an existing Set's details in the Set List.",
         "description": "Update an existing Set's details in the Set List.",
         "operationId": "UsersSetlistsSetsPartialUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetlistsSetsPartialUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3016,53 +2521,44 @@
         "summary": "Delete a Set from the Set List.",
         "description": "Delete a Set from the Set List.",
         "operationId": "UsersSetlistsSetsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "listId",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "ordering",
             "in": "query",
+            "name": "ordering",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3076,107 +2572,84 @@
         "summary": "Get a list of all the Sets in the user's LEGO collection.",
         "description": "Get a list of all the Sets in the user's LEGO collection.\n\n### Set List logic\nSets appearing in multiple Set Lists will be listed multiple times.\n\nOptionally, filter by one or more of the below query parameters.",
         "operationId": "UsersSetsList",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "page",
-            "in": "query",
             "description": "A page number within the paginated result set.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "page_size",
-            "in": "query",
             "description": "Number of results to return per page.",
-            "schema": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           {
+            "in": "query",
             "name": "set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3188,36 +2661,27 @@
         "summary": "Add one or more Sets to the user's LEGO collection. Existing Sets are unaffected.",
         "description": "\"Add one or more Sets to the user's LEGO collection. Existing Sets are unaffected.\n\n### Set List logic\nThe Set List used when adding sets is chosen in the following order:\n1. If no Set Lists exist, one will be created and used\n2. User's configured default Set List for Imports\n3. The first Set List alphabetically\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.\"",
         "operationId": "UsersSetsCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetsCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3231,36 +2695,27 @@
         "summary": "Synchronise a user's Sets to the POSTed list.",
         "description": "\"Synchronise a user's Sets to the POSTed list.\n\n### Set List logic\nThis is used to completely replace the user's Sets with those in the supplied list.\nIt will remove any Sets in Rebrickable that are not found in the supplied list.\nIt will attempt to keep any current Rebrickable Sets in their existing Set Lists, and will add any new Sets\nfound into the Default Set List for Imports in the user's settings.\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set is unrecognised, it will be skipped.\"",
         "operationId": "UsersSetsSyncCreate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
-            "name": "userToken",
             "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetsSyncCreateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3274,100 +2729,79 @@
         "summary": "Get details about a specific Set in the user's LEGO collection.",
         "description": "Get details about a specific Set in the user's LEGO collection.\n\n### Set List logic\nBecause this merges sets found across all Set Lists the fields list_id and include_spares may not be\naccurate unless the Set actually only exists in a single Set List.",
         "operationId": "UsersSetsRead",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3379,109 +2813,82 @@
         "summary": "Update an existing Set's quantity in all Set Lists. This PUT call is different to others in that it will create",
         "description": "Update an existing Set's quantity in all Set Lists. This PUT call is different to others in that it will create\nthe Set if it doesn't already exist, and it will delete the Set if you pass a quantity of 0.\n\n### Set List logic\n* Default Set List = user's configured default import list or the first alphabetically if none exist.\n* Increasing quantity = add to Set in default Set List if it exists, else add it there\n* Decreasing quantity = remove from Set in default Set List first, then from remaining lists until done",
         "operationId": "UsersSetsUpdate",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/UsersSetsUpdateXWwwFormUrlencodedRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
@@ -3493,396 +2900,368 @@
         "summary": "Delete the Set from all the user's Set Lists.",
         "description": "Delete the Set from all the user's Set Lists.",
         "operationId": "UsersSetsDelete",
+        "produces": [
+          "application/octet-stream"
+        ],
         "parameters": [
           {
+            "in": "path",
             "name": "setNum",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "path",
             "name": "userToken",
-            "in": "path",
             "description": "",
             "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "set_num",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
+            "in": "query",
             "name": "theme_id",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_year",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "min_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "max_parts",
-            "in": "query",
             "description": "",
-            "schema": {
-              "type": "number"
-            }
+            "type": "number"
           },
           {
+            "in": "query",
             "name": "ordering",
-            "in": "query",
             "description": "Which field to use when ordering the results.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           },
           {
-            "name": "search",
             "in": "query",
+            "name": "search",
             "description": "A search term.",
-            "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
         ],
         "responses": {
           "204": {
             "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "object",
-                  "description": "Fallback media schema"
-                }
-              }
+            "schema": {
+              "type": "object",
+              "description": "Fallback media schema"
             }
           }
         }
       }
     }
   },
-  "components": {
-    "schemas": {
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
-      "UsersTokenCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "username",
-          "password"
-        ],
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string",
-            "description": "Username (or email) of user"
-          },
-          "password": {
-            "type": "string",
-            "description": "Password of user"
-          }
-        }
-      },
-      "UsersLostPartsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "inv_part_id"
-        ],
-        "type": "object",
-        "properties": {
-          "lost_quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "inv_part_id": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersPartlistsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_parts": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersPartlistsUpdateXWwwFormUrlencodedRequest": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_parts": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersPartlistsPartialUpdateXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_parts": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersPartlistsPartsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "part_num",
-          "quantity",
-          "color_id"
-        ],
-        "type": "object",
-        "properties": {
-          "part_num": {
-            "type": "string",
-            "description": ""
-          },
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "color_id": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest": {
-        "required": [
-          "quantity"
-        ],
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_sets": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsUpdateXWwwFormUrlencodedRequest": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_sets": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "properties": {
-          "is_buildable": {
-            "type": "boolean",
-            "description": ""
-          },
-          "name": {
-            "type": "string",
-            "description": ""
-          },
-          "num_sets": {
-            "type": "integer",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsSetsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "set_num"
-        ],
-        "type": "object",
-        "properties": {
-          "set_num": {
-            "type": "string",
-            "description": ""
-          },
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "include_spares": {
-            "type": "boolean",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "include_spares": {
-            "type": "boolean",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetlistsSetsPartialUpdateXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "include_spares": {
-            "type": "boolean",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetsCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "set_num"
-        ],
-        "type": "object",
-        "properties": {
-          "set_num": {
-            "type": "string",
-            "description": ""
-          },
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "include_spares": {
-            "type": "boolean",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetsSyncCreateXWwwFormUrlencodedRequest": {
-        "required": [
-          "set_num"
-        ],
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          },
-          "include_spares": {
-            "type": "boolean",
-            "description": ""
-          },
-          "set_num": {
-            "type": "string",
-            "description": ""
-          }
-        }
-      },
-      "UsersSetsUpdateXWwwFormUrlencodedRequest": {
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "type": "integer",
-            "description": ""
-          }
+  "definitions": {
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "UsersTokenCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "username",
+        "password"
+      ],
+      "properties": {
+        "username": {
+          "type": "string",
+          "description": "Username (or email) of user"
+        },
+        "password": {
+          "type": "string",
+          "description": "Password of user"
         }
       }
     },
-    "securitySchemes": {
-      "assets_jwt": {
-        "type": "http",
-        "description": "JWT used for assets upload",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
+    "UsersLostPartsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "inv_part_id"
+      ],
+      "properties": {
+        "lost_quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "inv_part_id": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersPartlistsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_parts": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersPartlistsUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_parts": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersPartlistsPartialUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_parts": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersPartlistsPartsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "part_num",
+        "quantity",
+        "color_id"
+      ],
+      "properties": {
+        "part_num": {
+          "type": "string",
+          "description": ""
+        },
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "color_id": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersPartlistsPartsUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "quantity"
+      ],
+      "properties": {
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_sets": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_sets": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsPartialUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "properties": {
+        "is_buildable": {
+          "type": "boolean",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "num_sets": {
+          "type": "integer",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsSetsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "set_num"
+      ],
+      "properties": {
+        "set_num": {
+          "type": "string",
+          "description": ""
+        },
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "include_spares": {
+          "type": "boolean",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsSetsUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "include_spares": {
+          "type": "boolean",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetlistsSetsPartialUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "include_spares": {
+          "type": "boolean",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetsCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "set_num"
+      ],
+      "properties": {
+        "set_num": {
+          "type": "string",
+          "description": ""
+        },
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "include_spares": {
+          "type": "boolean",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetsSyncCreateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "required": [
+        "set_num"
+      ],
+      "properties": {
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        },
+        "include_spares": {
+          "type": "boolean",
+          "description": ""
+        },
+        "set_num": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "UsersSetsUpdateXWwwFormUrlencodedRequest": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "integer",
+          "description": ""
+        }
       }
     }
+  },
+  "securityDefinitions": {
+    "assets_jwt": { }
   }
 }

@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Rebrickable.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -72,20 +71,18 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
         /// Update an existing Set&apos;s quantity in all Set Lists. This PUT call is different to others in that it will createthe Set if it doesn&apos;t already exist, and it will delete the Set if you pass a quantity of 0.### Set List logic* Default Set List = user&apos;s configured default import list or the first alphabetically if none exist.* Increasing quantity = add to Set in default Set List if it exists, else add it there* Decreasing quantity = remove from Set in default Set List first, then from remaining lists until done
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PutAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PutAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PutAsync(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPutRequestInformation(body, requestConfiguration);
+            var requestInfo = ToPutRequestInformation(requestConfiguration);
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
@@ -130,22 +127,19 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
         /// Update an existing Set&apos;s quantity in all Set Lists. This PUT call is different to others in that it will createthe Set if it doesn&apos;t already exist, and it will delete the Set if you pass a quantity of 0.### Set List logic* Default Set List = user&apos;s configured default import list or the first alphabetically if none exist.* Increasing quantity = add to Set in default Set List if it exists, else add it there* Decreasing quantity = remove from Set in default Set List first, then from remaining lists until done
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetsUpdateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item.WithSetNumItemRequestBuilder.WithSetNumItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
             return requestInfo;
         }
         /// <summary>

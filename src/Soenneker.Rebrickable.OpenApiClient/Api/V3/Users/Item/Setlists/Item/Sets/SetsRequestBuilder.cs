@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Sets.Item;
-using Soenneker.Rebrickable.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -67,20 +66,18 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// <summary>
         /// &quot;Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{\&quot;set_num\&quot;:\&quot;8043-1\&quot;, \&quot;quantity\&quot;: 1}, {\&quot;set_num\&quot;:\&quot;8110-1\&quot;, \&quot;quantity\&quot;: 2, \&quot;include_spares\&quot;: \&quot;False\&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.&quot;
         /// </summary>
-        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            var requestInfo = ToPostRequestInformation(requestConfiguration);
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
@@ -106,22 +103,19 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
         /// &quot;Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{\&quot;set_num\&quot;:\&quot;8043-1\&quot;, \&quot;quantity\&quot;: 1}, {\&quot;set_num\&quot;:\&quot;8110-1\&quot;, \&quot;quantity\&quot;: 2, \&quot;include_spares\&quot;: \&quot;False\&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Rebrickable.OpenApiClient.Models.UsersSetlistsSetsCreateXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/octet-stream");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
             return requestInfo;
         }
         /// <summary>
