@@ -64,7 +64,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Add one or more Lost Parts to the user.### Single PartWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could notbe added.### Multiple PartsTo add multiple Parts, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;). The inv_part_idfield can be retrieved from the Set&apos;s inventory.e.g:`[{\&quot;inv_part_id\&quot;: 806698, \&quot;lost_quantity\&quot;: 3},  {\&quot;inv_part_id\&quot;: 256007, \&quot;lost_quantity\&quot;: 2}]`Returns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.&quot;
+        /// Add one or more Lost Parts to the user.### Single PartWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could notbe added.### Multiple PartsTo add multiple Parts, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;). The inv_part_idfield can be retrieved from the Set&apos;s inventory.e.g:`[{&quot;inv_part_id&quot;: 806698, &quot;lost_quantity&quot;: 3},  {&quot;inv_part_id&quot;: 256007, &quot;lost_quantity&quot;: 2}]`Returns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Lost_parts
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Add one or more Lost Parts to the user.### Single PartWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could notbe added.### Multiple PartsTo add multiple Parts, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;). The inv_part_idfield can be retrieved from the Set&apos;s inventory.e.g:`[{\&quot;inv_part_id\&quot;: 806698, \&quot;lost_quantity\&quot;: 3},  {\&quot;inv_part_id\&quot;: 256007, \&quot;lost_quantity\&quot;: 2}]`Returns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.&quot;
+        /// Add one or more Lost Parts to the user.### Single PartWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could notbe added.### Multiple PartsTo add multiple Parts, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;). The inv_part_idfield can be retrieved from the Set&apos;s inventory.e.g:`[{&quot;inv_part_id&quot;: 806698, &quot;lost_quantity&quot;: 3},  {&quot;inv_part_id&quot;: 256007, &quot;lost_quantity&quot;: 2}]`Returns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

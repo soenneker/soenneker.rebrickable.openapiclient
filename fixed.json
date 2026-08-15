@@ -1306,7 +1306,7 @@
           "users"
         ],
         "summary": "Add one or more Lost Parts to the user.",
-        "description": "\"Add one or more Lost Parts to the user.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json'). The inv_part_id\nfield can be retrieved from the Set's inventory.\ne.g:\n`[{\\\"inv_part_id\\\": 806698, \\\"lost_quantity\\\": 3},\n  {\\\"inv_part_id\\\": 256007, \\\"lost_quantity\\\": 2}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.\"",
+        "description": "Add one or more Lost Parts to the user.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json'). The inv_part_id\nfield can be retrieved from the Set's inventory.\ne.g:\n`[{\"inv_part_id\": 806698, \"lost_quantity\": 3},\n  {\"inv_part_id\": 256007, \"lost_quantity\": 2}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.",
         "operationId": "UsersLostPartsCreate",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -1348,14 +1348,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "id",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "id",
             "description": "",
             "required": true,
             "type": "string"
@@ -1528,14 +1528,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1567,14 +1567,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1606,14 +1606,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1642,14 +1642,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1680,14 +1680,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1726,7 +1726,7 @@
           "users"
         ],
         "summary": "Add one or more Parts to the Part List.",
-        "description": "\"Add one or more Parts to the Part List.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"part_num\\\":\\\"3001\\\", \\\"color_id\\\": 1, \\\"quantity\\\": 10},\n {\\\"part_num\\\":\\\"3001\\\", \\\"color_id\\\": 2, \\\"quantity\\\": 20},\n {\\\"part_num\\\":\\\"3002\\\", \\\"color_id\\\": 14, \\\"quantity\\\": 30}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.\"",
+        "description": "Add one or more Parts to the Part List.\n\n### Single Part\nWhen adding a single Part, returns the successfully created Part (status 201) or details for why the Part could not\nbe added.\n### Multiple Parts\nTo add multiple Parts, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\"part_num\":\"3001\", \"color_id\": 1, \"quantity\": 10},\n {\"part_num\":\"3001\", \"color_id\": 2, \"quantity\": 20},\n {\"part_num\":\"3002\", \"color_id\": 14, \"quantity\": 30}]`\nReturns a list of successfully added Parts. If the Part already exists or is unrecognised, it will be skipped.",
         "operationId": "UsersPartlistsPartsCreate",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -1737,14 +1737,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1782,13 +1782,6 @@
           },
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "colorId",
             "description": "",
             "required": true,
@@ -1797,6 +1790,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1841,13 +1841,6 @@
           },
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "colorId",
             "description": "",
             "required": true,
@@ -1856,6 +1849,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -1897,13 +1897,6 @@
           },
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "colorId",
             "description": "",
             "required": true,
@@ -1912,6 +1905,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2127,14 +2127,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2166,14 +2166,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2205,14 +2205,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2241,14 +2241,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2279,14 +2279,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2325,7 +2325,7 @@
           "users"
         ],
         "summary": "Add one or more Sets to the Set List. Existing Sets are unaffected.",
-        "description": "\"Add one or more Sets to the Set List. Existing Sets are unaffected.\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.\"",
+        "description": "Add one or more Sets to the Set List. Existing Sets are unaffected.\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\"set_num\":\"8043-1\", \"quantity\": 1},\n {\"set_num\":\"8110-1\", \"quantity\": 2, \"include_spares\": \"False\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.",
         "operationId": "UsersSetlistsSetsCreate",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -2336,14 +2336,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2374,13 +2374,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "setNum",
             "description": "",
             "required": true,
@@ -2389,6 +2382,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2426,13 +2426,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "setNum",
             "description": "",
             "required": true,
@@ -2441,6 +2434,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2478,13 +2478,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "setNum",
             "description": "",
             "required": true,
@@ -2493,6 +2486,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2527,13 +2527,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "listId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "setNum",
             "description": "",
             "required": true,
@@ -2542,6 +2535,13 @@
           {
             "in": "path",
             "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2659,7 +2659,7 @@
           "users"
         ],
         "summary": "Add one or more Sets to the user's LEGO collection. Existing Sets are unaffected.",
-        "description": "\"Add one or more Sets to the user's LEGO collection. Existing Sets are unaffected.\n\n### Set List logic\nThe Set List used when adding sets is chosen in the following order:\n1. If no Set Lists exist, one will be created and used\n2. User's configured default Set List for Imports\n3. The first Set List alphabetically\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.\"",
+        "description": "Add one or more Sets to the user's LEGO collection. Existing Sets are unaffected.\n\n### Set List logic\nThe Set List used when adding sets is chosen in the following order:\n1. If no Set Lists exist, one will be created and used\n2. User's configured default Set List for Imports\n3. The first Set List alphabetically\n\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\"set_num\":\"8043-1\", \"quantity\": 1},\n {\"set_num\":\"8110-1\", \"quantity\": 2, \"include_spares\": \"False\"}]`\nReturns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.",
         "operationId": "UsersSetsCreate",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -2693,7 +2693,7 @@
           "users"
         ],
         "summary": "Synchronise a user's Sets to the POSTed list.",
-        "description": "\"Synchronise a user's Sets to the POSTed list.\n\n### Set List logic\nThis is used to completely replace the user's Sets with those in the supplied list.\nIt will remove any Sets in Rebrickable that are not found in the supplied list.\nIt will attempt to keep any current Rebrickable Sets in their existing Set Lists, and will add any new Sets\nfound into the Default Set List for Imports in the user's settings.\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\\\"set_num\\\":\\\"8043-1\\\", \\\"quantity\\\": 1},\n {\\\"set_num\\\":\\\"8110-1\\\", \\\"quantity\\\": 2, \\\"include_spares\\\": \\\"False\\\"}]`\nReturns a list of successfully added Sets. If the Set is unrecognised, it will be skipped.\"",
+        "description": "Synchronise a user's Sets to the POSTed list.\n\n### Set List logic\nThis is used to completely replace the user's Sets with those in the supplied list.\nIt will remove any Sets in Rebrickable that are not found in the supplied list.\nIt will attempt to keep any current Rebrickable Sets in their existing Set Lists, and will add any new Sets\nfound into the Default Set List for Imports in the user's settings.\n### Single Set\nWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could not\nbe added.\n### Multiple Sets\nTo add multiple Sets, POST a JSON list of them (using a Content-Type header of 'application/json').\ne.g:\n`[{\"set_num\":\"8043-1\", \"quantity\": 1},\n {\"set_num\":\"8110-1\", \"quantity\": 2, \"include_spares\": \"False\"}]`\nReturns a list of successfully added Sets. If the Set is unrecognised, it will be skipped.",
         "operationId": "UsersSetsSyncCreate",
         "consumes": [
           "application/x-www-form-urlencoded"
@@ -3260,8 +3260,5 @@
         }
       }
     }
-  },
-  "securityDefinitions": {
-    "assets_jwt": { }
   }
 }

@@ -64,7 +64,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{\&quot;set_num\&quot;:\&quot;8043-1\&quot;, \&quot;quantity\&quot;: 1}, {\&quot;set_num\&quot;:\&quot;8110-1\&quot;, \&quot;quantity\&quot;: 2, \&quot;include_spares\&quot;: \&quot;False\&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.&quot;
+        /// Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{&quot;set_num&quot;:&quot;8043-1&quot;, &quot;quantity&quot;: 1}, {&quot;set_num&quot;:&quot;8110-1&quot;, &quot;quantity&quot;: 2, &quot;include_spares&quot;: &quot;False&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Setlists.Item.Se
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{\&quot;set_num\&quot;:\&quot;8043-1\&quot;, \&quot;quantity\&quot;: 1}, {\&quot;set_num\&quot;:\&quot;8110-1\&quot;, \&quot;quantity\&quot;: 2, \&quot;include_spares\&quot;: \&quot;False\&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.&quot;
+        /// Add one or more Sets to the Set List. Existing Sets are unaffected.### Single SetWhen adding a single Set, returns the successfully created Set (status 201) or details for why the Set could notbe added.### Multiple SetsTo add multiple Sets, POST a JSON list of them (using a Content-Type header of &apos;application/json&apos;).e.g:`[{&quot;set_num&quot;:&quot;8043-1&quot;, &quot;quantity&quot;: 1}, {&quot;set_num&quot;:&quot;8110-1&quot;, &quot;quantity&quot;: 2, &quot;include_spares&quot;: &quot;False&quot;}]`Returns a list of successfully added Sets. If the Set already exists or is unrecognised, it will be skipped.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
