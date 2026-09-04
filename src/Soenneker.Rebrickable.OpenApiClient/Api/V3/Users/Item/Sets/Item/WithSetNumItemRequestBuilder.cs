@@ -157,14 +157,22 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSetNumItemRequestBuilderDeleteQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("max_parts")]
             public double? MaxParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("max_year")]
             public double? MaxYear { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_parts")]
             public double? MinParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_year")]
             public double? MinYear { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -187,15 +195,21 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string? SetNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string SetNum { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("theme_id")]
             public double? ThemeId { get; set; }
+            #pragma warning restore CS1591
         }
         /// <summary>
         /// Get details about a specific Set in the user&apos;s LEGO collection.### Set List logicBecause this merges sets found across all Set Lists the fields list_id and include_spares may not beaccurate unless the Set actually only exists in a single Set List.
@@ -203,14 +217,22 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSetNumItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("max_parts")]
             public double? MaxParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("max_year")]
             public double? MaxYear { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_parts")]
             public double? MinParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_year")]
             public double? MinYear { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -233,15 +255,21 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string? SetNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string SetNum { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("theme_id")]
             public double? ThemeId { get; set; }
+            #pragma warning restore CS1591
         }
         /// <summary>
         /// Update an existing Set&apos;s quantity in all Set Lists. This PUT call is different to others in that it will createthe Set if it doesn&apos;t already exist, and it will delete the Set if you pass a quantity of 0.### Set List logic* Default Set List = user&apos;s configured default import list or the first alphabetically if none exist.* Increasing quantity = add to Set in default Set List if it exists, else add it there* Decreasing quantity = remove from Set in default Set List first, then from remaining lists until done
@@ -249,14 +277,22 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSetNumItemRequestBuilderPutQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("max_parts")]
             public double? MaxParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("max_year")]
             public double? MaxYear { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_parts")]
             public double? MinParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_year")]
             public double? MinYear { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -279,15 +315,21 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets.Item
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string? SetNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string SetNum { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("theme_id")]
             public double? ThemeId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -84,8 +84,10 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Parts
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PartsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("color_id")]
             public double? ColorId { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,16 +104,22 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Parts
             /// <summary>Number of results to return per page.</summary>
             [QueryParameter("page_size")]
             public int? PageSize { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("part_cat_id")]
             public double? PartCatId { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("part_num")]
             public string? PartNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("part_num")]
             public string PartNum { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>A search term.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

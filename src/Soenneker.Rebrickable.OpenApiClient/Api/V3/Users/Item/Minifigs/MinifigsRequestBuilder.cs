@@ -86,12 +86,16 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Minifigs
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("fig_set_num")]
             public string? FigSetNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("fig_set_num")]
             public string FigSetNum { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

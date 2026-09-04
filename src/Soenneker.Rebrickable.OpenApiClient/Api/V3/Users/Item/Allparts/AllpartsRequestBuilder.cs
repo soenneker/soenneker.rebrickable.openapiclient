@@ -84,24 +84,32 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Allparts
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllpartsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("color_id")]
             public double? ColorId { get; set; }
+            #pragma warning restore CS1591
             /// <summary>A page number within the paginated result set.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
             /// <summary>Number of results to return per page.</summary>
             [QueryParameter("page_size")]
             public int? PageSize { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("part_cat_id")]
             public double? PartCatId { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("part_num")]
             public string? PartNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("part_num")]
             public string PartNum { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

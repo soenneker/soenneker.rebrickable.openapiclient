@@ -139,14 +139,22 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SetsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("max_parts")]
             public double? MaxParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("max_year")]
             public double? MaxYear { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_parts")]
             public double? MinParts { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("min_year")]
             public double? MinYear { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Which field to use when ordering the results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -175,15 +183,21 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Sets
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string? SetNum { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("set_num")]
             public string SetNum { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("theme_id")]
             public double? ThemeId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

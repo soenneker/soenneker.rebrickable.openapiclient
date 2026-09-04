@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "DC18833A8CEF36F862C7BBE685777BD538E35FC1FA16A139735F38635A29630259CE348B6B086007BBBDD9BC085B4FE1EDFA6A02B2072050EC416B2571DC8893",
+  "descriptionHash": "9669649CDC8C9ABD9F2271A0CB7EBA285C6731D31029370FD5A22B4B6CE071EBC605379560152BA737EF8BF8F44D17198DF112A1C3A8BDCB06790036A91F195B",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "RebrickableOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Rebrickable.OpenApiClient",
