@@ -532,14 +532,14 @@
         },
         "parameters": [
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -563,14 +563,14 @@
         },
         "parameters": [
           {
-            "name": "color_id",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -1123,14 +1123,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "set_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "set_num",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1238,14 +1238,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1419,14 +1419,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1448,14 +1448,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1501,14 +1501,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1554,14 +1554,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1585,14 +1585,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1635,14 +1635,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1690,14 +1690,7 @@
         },
         "parameters": [
           {
-            "name": "color_id",
-            "required": true,
-            "in": "path",
-            "description": "",
-            "type": "string"
-          },
-          {
-            "name": "user_token",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1711,7 +1704,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
+            "required": true,
+            "in": "path",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1740,14 +1740,7 @@
         },
         "parameters": [
           {
-            "name": "color_id",
-            "required": true,
-            "in": "path",
-            "description": "",
-            "type": "string"
-          },
-          {
-            "name": "user_token",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1761,7 +1754,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
+            "required": true,
+            "in": "path",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -1800,14 +1800,7 @@
         },
         "parameters": [
           {
-            "name": "color_id",
-            "required": true,
-            "in": "path",
-            "description": "",
-            "type": "string"
-          },
-          {
-            "name": "user_token",
+            "name": "part_num",
             "required": true,
             "in": "path",
             "description": "",
@@ -1821,7 +1814,14 @@
             "type": "string"
           },
           {
-            "name": "part_num",
+            "name": "color_id",
+            "required": true,
+            "in": "path",
+            "description": "",
+            "type": "string"
+          },
+          {
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2033,14 +2033,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2062,14 +2062,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2115,14 +2115,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2168,14 +2168,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2199,14 +2199,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2249,14 +2249,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2304,7 +2304,7 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -2318,7 +2318,7 @@
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2347,7 +2347,7 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -2361,7 +2361,7 @@
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2407,7 +2407,7 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -2421,7 +2421,7 @@
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2467,7 +2467,7 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "list_id",
             "required": true,
             "in": "path",
             "description": "",
@@ -2481,7 +2481,7 @@
             "type": "string"
           },
           {
-            "name": "list_id",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2700,14 +2700,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "set_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "set_num",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2785,14 +2785,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "set_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "set_num",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
@@ -2880,14 +2880,14 @@
         },
         "parameters": [
           {
-            "name": "user_token",
+            "name": "set_num",
             "required": true,
             "in": "path",
             "description": "",
             "type": "string"
           },
           {
-            "name": "set_num",
+            "name": "user_token",
             "required": true,
             "in": "path",
             "description": "",
