@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts;
 using Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Sets;
@@ -20,11 +19,6 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithSetNumItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The alternates property</summary>
-        public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates.AlternatesRequestBuilder Alternates
-        {
-            get => new global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Alternates.AlternatesRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The minifigs property</summary>
         public global::Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Minifigs.MinifigsRequestBuilder Minifigs
         {
