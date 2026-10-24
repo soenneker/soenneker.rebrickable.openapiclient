@@ -10,7 +10,7 @@
     "https"
   ],
   "paths": {
-    "/api/v3/lego/colors": {
+    "/api/v3/lego/colors/": {
       "get": {
         "tags": [
           "lego"
@@ -45,14 +45,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/colors/{id}": {
+    "/api/v3/lego/colors/{id}/": {
       "get": {
         "tags": [
           "lego"
@@ -82,14 +81,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/elements/{elementId}": {
+    "/api/v3/lego/elements/{elementId}/": {
       "get": {
         "tags": [
           "lego"
@@ -113,14 +111,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/minifigs": {
+    "/api/v3/lego/minifigs/": {
       "get": {
         "tags": [
           "lego"
@@ -185,14 +182,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/minifigs/{setNum}": {
+    "/api/v3/lego/minifigs/{setNum}/": {
       "get": {
         "tags": [
           "lego"
@@ -216,14 +212,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/minifigs/{setNum}/parts": {
+    "/api/v3/lego/minifigs/{setNum}/parts/": {
       "get": {
         "tags": [
           "lego"
@@ -259,14 +254,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/minifigs/{setNum}/sets": {
+    "/api/v3/lego/minifigs/{setNum}/sets/": {
       "get": {
         "tags": [
           "lego"
@@ -308,14 +302,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/part_categories": {
+    "/api/v3/lego/part_categories/": {
       "get": {
         "tags": [
           "lego"
@@ -350,14 +343,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/part_categories/{id}": {
+    "/api/v3/lego/part_categories/{id}/": {
       "get": {
         "tags": [
           "lego"
@@ -387,14 +379,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/parts": {
+    "/api/v3/lego/parts/": {
       "get": {
         "tags": [
           "lego"
@@ -483,14 +474,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/parts/{partNum}": {
+    "/api/v3/lego/parts/{partNum}/": {
       "get": {
         "tags": [
           "lego"
@@ -514,14 +504,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/parts/{partNum}/colors": {
+    "/api/v3/lego/parts/{partNum}/colors/": {
       "get": {
         "tags": [
           "lego"
@@ -563,14 +552,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/parts/{partNum}/colors/{colorId}": {
+    "/api/v3/lego/parts/{partNum}/colors/{colorId}/": {
       "get": {
         "tags": [
           "lego"
@@ -584,14 +572,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "colorId",
+            "name": "partNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "partNum",
+            "name": "colorId",
             "description": "",
             "required": true,
             "type": "string"
@@ -601,14 +589,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/parts/{partNum}/colors/{colorId}/sets": {
+    "/api/v3/lego/parts/{partNum}/colors/{colorId}/sets/": {
       "get": {
         "tags": [
           "lego"
@@ -622,14 +609,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "colorId",
+            "name": "partNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "partNum",
+            "name": "colorId",
             "description": "",
             "required": true,
             "type": "string"
@@ -657,14 +644,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/sets": {
+    "/api/v3/lego/sets/": {
       "get": {
         "tags": [
           "lego"
@@ -735,14 +721,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/sets/{setNum}": {
+    "/api/v3/lego/sets/{setNum}/": {
       "get": {
         "tags": [
           "lego"
@@ -766,14 +751,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/sets/{setNum}/minifigs": {
+    "/api/v3/lego/sets/{setNum}/minifigs/": {
       "get": {
         "tags": [
           "lego"
@@ -809,14 +793,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/sets/{setNum}/parts": {
+    "/api/v3/lego/sets/{setNum}/parts/": {
       "get": {
         "tags": [
           "lego"
@@ -852,14 +835,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/sets/{setNum}/sets": {
+    "/api/v3/lego/sets/{setNum}/sets/": {
       "get": {
         "tags": [
           "lego"
@@ -895,14 +877,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/themes": {
+    "/api/v3/lego/themes/": {
       "get": {
         "tags": [
           "lego"
@@ -937,14 +918,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/lego/themes/{id}": {
+    "/api/v3/lego/themes/{id}/": {
       "get": {
         "tags": [
           "lego"
@@ -974,14 +954,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/swagger": {
+    "/api/v3/swagger/": {
       "get": {
         "tags": [
           "swagger"
@@ -994,14 +973,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/_token": {
+    "/api/v3/users/_token/": {
       "post": {
         "tags": [
           "users"
@@ -1019,14 +997,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/badges": {
+    "/api/v3/users/badges/": {
       "get": {
         "tags": [
           "users"
@@ -1061,14 +1038,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/badges/{id}": {
+    "/api/v3/users/badges/{id}/": {
       "get": {
         "tags": [
           "users"
@@ -1098,14 +1074,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/allparts": {
+    "/api/v3/users/{userToken}/allparts/": {
       "get": {
         "tags": [
           "users"
@@ -1159,14 +1134,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/build/{setNum}": {
+    "/api/v3/users/{userToken}/build/{setNum}/": {
       "get": {
         "tags": [
           "users"
@@ -1180,14 +1154,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "setNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "setNum",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1197,14 +1171,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/lost_parts": {
+    "/api/v3/users/{userToken}/lost_parts/": {
       "get": {
         "tags": [
           "users"
@@ -1246,7 +1219,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1278,14 +1250,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/lost_parts/{id}": {
+    "/api/v3/users/{userToken}/lost_parts/{id}/": {
       "delete": {
         "tags": [
           "users"
@@ -1299,14 +1270,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "id",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "id",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1322,14 +1293,13 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/minifigs": {
+    "/api/v3/users/{userToken}/minifigs/": {
       "get": {
         "tags": [
           "users"
@@ -1383,14 +1353,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/partlists": {
+    "/api/v3/users/{userToken}/partlists/": {
       "get": {
         "tags": [
           "users"
@@ -1426,7 +1395,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1458,14 +1426,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/partlists/{listId}": {
+    "/api/v3/users/{userToken}/partlists/{listId}/": {
       "get": {
         "tags": [
           "users"
@@ -1479,14 +1446,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1496,7 +1463,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1518,14 +1484,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1535,7 +1501,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1557,14 +1522,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1574,7 +1539,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1593,14 +1557,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1610,14 +1574,13 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/partlists/{listId}/parts": {
+    "/api/v3/users/{userToken}/partlists/{listId}/parts/": {
       "get": {
         "tags": [
           "users"
@@ -1631,14 +1594,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1666,7 +1629,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1688,14 +1650,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1705,14 +1667,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/partlists/{listId}/parts/{partNum}/{colorId}": {
+    "/api/v3/users/{userToken}/partlists/{listId}/parts/{partNum}/{colorId}/": {
       "get": {
         "tags": [
           "users"
@@ -1724,20 +1685,6 @@
           "application/octet-stream"
         ],
         "parameters": [
-          {
-            "in": "path",
-            "name": "colorId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "userToken",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
           {
             "in": "path",
             "name": "listId",
@@ -1753,6 +1700,20 @@
             "type": "string"
           },
           {
+            "in": "path",
+            "name": "colorId",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "userToken",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
             "in": "query",
             "name": "ordering",
             "description": "Which field to use when ordering the results.",
@@ -1763,7 +1724,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1785,20 +1745,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "colorId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "userToken",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "listId",
             "description": "",
             "required": true,
@@ -1807,6 +1753,20 @@
           {
             "in": "path",
             "name": "partNum",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "colorId",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1822,7 +1782,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -1841,20 +1800,6 @@
         "parameters": [
           {
             "in": "path",
-            "name": "colorId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "userToken",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
             "name": "listId",
             "description": "",
             "required": true,
@@ -1863,6 +1808,20 @@
           {
             "in": "path",
             "name": "partNum",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "colorId",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -1878,14 +1837,13 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/parts": {
+    "/api/v3/users/{userToken}/parts/": {
       "get": {
         "tags": [
           "users"
@@ -1951,14 +1909,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/profile": {
+    "/api/v3/users/{userToken}/profile/": {
       "get": {
         "tags": [
           "users"
@@ -1982,14 +1939,13 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/setlists": {
+    "/api/v3/users/{userToken}/setlists/": {
       "get": {
         "tags": [
           "users"
@@ -2025,7 +1981,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2057,14 +2012,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/setlists/{listId}": {
+    "/api/v3/users/{userToken}/setlists/{listId}/": {
       "get": {
         "tags": [
           "users"
@@ -2078,14 +2032,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2095,7 +2049,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2117,14 +2070,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2134,7 +2087,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2156,14 +2108,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2173,7 +2125,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2192,14 +2143,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2209,14 +2160,13 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/setlists/{listId}/sets": {
+    "/api/v3/users/{userToken}/setlists/{listId}/sets/": {
       "get": {
         "tags": [
           "users"
@@ -2230,14 +2180,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2265,7 +2215,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2287,14 +2236,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2304,14 +2253,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/setlists/{listId}/sets/{setNum}": {
+    "/api/v3/users/{userToken}/setlists/{listId}/sets/{setNum}/": {
       "get": {
         "tags": [
           "users"
@@ -2325,7 +2273,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2339,7 +2287,7 @@
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2355,7 +2303,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2377,7 +2324,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2391,7 +2338,7 @@
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2407,7 +2354,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2429,7 +2375,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2443,7 +2389,7 @@
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2459,7 +2405,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2478,7 +2423,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "listId",
             "description": "",
             "required": true,
             "type": "string"
@@ -2492,7 +2437,7 @@
           },
           {
             "in": "path",
-            "name": "listId",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2508,14 +2453,13 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/sets": {
+    "/api/v3/users/{userToken}/sets/": {
       "get": {
         "tags": [
           "users"
@@ -2599,7 +2543,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2631,14 +2574,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/sets/sync": {
+    "/api/v3/users/{userToken}/sets/sync/": {
       "post": {
         "tags": [
           "users"
@@ -2665,14 +2607,13 @@
           "201": {
             "description": "201 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
         }
       }
     },
-    "/api/v3/users/{userToken}/sets/{setNum}": {
+    "/api/v3/users/{userToken}/sets/{setNum}/": {
       "get": {
         "tags": [
           "users"
@@ -2686,14 +2627,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "setNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "setNum",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2751,7 +2692,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2773,14 +2713,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "setNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "setNum",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2838,7 +2778,6 @@
           "200": {
             "description": "200 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
@@ -2857,14 +2796,14 @@
         "parameters": [
           {
             "in": "path",
-            "name": "userToken",
+            "name": "setNum",
             "description": "",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
-            "name": "setNum",
+            "name": "userToken",
             "description": "",
             "required": true,
             "type": "string"
@@ -2922,7 +2861,6 @@
           "204": {
             "description": "204 response",
             "schema": {
-              "type": "object",
               "description": "Fallback media schema"
             }
           }
