@@ -48,7 +48,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Lego.Sets.Item.Parts
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of all Inventory Parts in this Set.Optional parameter inc_part_details=1 can be used to return additional part fields, the same as for a single part lookup.Optional parameter inc_minifig_parts=1 can be used to include minifig parts in this call.Optional parameter inc_color_details=0 can be used to prevent color field expansion and reduce response sizes.

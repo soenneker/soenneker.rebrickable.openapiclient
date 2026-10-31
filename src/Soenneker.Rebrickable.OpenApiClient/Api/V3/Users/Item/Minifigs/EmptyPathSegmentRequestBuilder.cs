@@ -48,7 +48,7 @@ namespace Soenneker.Rebrickable.OpenApiClient.Api.V3.Users.Item.Minifigs
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of all the Minifigs in all the user&apos;s Sets. Note that this is a read-only list as Minifigs areautomatically determined by the Sets in the user&apos;s Set Lists.Minifigs that were manually added to Set Lists can be retrieved via theGET /api/v3/users/{user_token}/sets/ endpoint.Optionally, filter by one or more of the below query parameters.
