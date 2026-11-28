@@ -669,7 +669,7 @@
         "operationId": "LegoPartsColorsRead",
         "parameters": [
           {
-            "name": "partNum",
+            "name": "colorId",
             "in": "path",
             "description": "",
             "required": true,
@@ -678,7 +678,7 @@
             }
           },
           {
-            "name": "colorId",
+            "name": "partNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -711,7 +711,7 @@
         "operationId": "LegoPartsColorsSetsList",
         "parameters": [
           {
-            "name": "partNum",
+            "name": "colorId",
             "in": "path",
             "description": "",
             "required": true,
@@ -720,7 +720,7 @@
             }
           },
           {
-            "name": "colorId",
+            "name": "partNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -1366,7 +1366,7 @@
         "operationId": "UsersBuildRead",
         "parameters": [
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1375,7 +1375,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -1516,7 +1516,7 @@
         "operationId": "UsersLostPartsDelete",
         "parameters": [
           {
-            "name": "id",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1525,7 +1525,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "id",
             "in": "path",
             "description": "",
             "required": true,
@@ -1750,7 +1750,7 @@
         "operationId": "UsersPartlistsRead",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1759,7 +1759,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -1790,7 +1790,7 @@
         "operationId": "UsersPartlistsUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1799,7 +1799,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -1839,7 +1839,7 @@
         "operationId": "UsersPartlistsPartialUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1848,7 +1848,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -1888,7 +1888,7 @@
         "operationId": "UsersPartlistsDelete",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1897,7 +1897,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -1941,7 +1941,7 @@
         "operationId": "UsersPartlistsPartsList",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -1950,7 +1950,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2005,7 +2005,7 @@
         "operationId": "UsersPartlistsPartsCreate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2014,7 +2014,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2067,24 +2067,6 @@
         "operationId": "UsersPartlistsPartsRead",
         "parameters": [
           {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "partNum",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "colorId",
             "in": "path",
             "description": "",
@@ -2095,6 +2077,24 @@
           },
           {
             "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2133,24 +2133,6 @@
         "operationId": "UsersPartlistsPartsUpdate",
         "parameters": [
           {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "partNum",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "colorId",
             "in": "path",
             "description": "",
@@ -2161,6 +2143,24 @@
           },
           {
             "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2208,24 +2208,6 @@
         "operationId": "UsersPartlistsPartsDelete",
         "parameters": [
           {
-            "name": "listId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "partNum",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "colorId",
             "in": "path",
             "description": "",
@@ -2236,6 +2218,24 @@
           },
           {
             "name": "userToken",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -2509,7 +2509,7 @@
         "operationId": "UsersSetlistsRead",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2518,7 +2518,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2549,7 +2549,7 @@
         "operationId": "UsersSetlistsUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2558,7 +2558,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2598,7 +2598,7 @@
         "operationId": "UsersSetlistsPartialUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2607,7 +2607,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2647,7 +2647,7 @@
         "operationId": "UsersSetlistsDelete",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2656,7 +2656,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2700,7 +2700,7 @@
         "operationId": "UsersSetlistsSetsList",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2709,7 +2709,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2764,7 +2764,7 @@
         "operationId": "UsersSetlistsSetsCreate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2773,7 +2773,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2826,7 +2826,7 @@
         "operationId": "UsersSetlistsSetsRead",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2844,7 +2844,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2883,7 +2883,7 @@
         "operationId": "UsersSetlistsSetsUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2901,7 +2901,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -2949,7 +2949,7 @@
         "operationId": "UsersSetlistsSetsPartialUpdate",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -2967,7 +2967,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -3015,7 +3015,7 @@
         "operationId": "UsersSetlistsSetsDelete",
         "parameters": [
           {
-            "name": "listId",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3033,7 +3033,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "listId",
             "in": "path",
             "description": "",
             "required": true,
@@ -3302,7 +3302,7 @@
         "operationId": "UsersSetsRead",
         "parameters": [
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3311,7 +3311,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3406,7 +3406,7 @@
         "operationId": "UsersSetsUpdate",
         "parameters": [
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3415,7 +3415,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
@@ -3519,7 +3519,7 @@
         "operationId": "UsersSetsDelete",
         "parameters": [
           {
-            "name": "setNum",
+            "name": "userToken",
             "in": "path",
             "description": "",
             "required": true,
@@ -3528,7 +3528,7 @@
             }
           },
           {
-            "name": "userToken",
+            "name": "setNum",
             "in": "path",
             "description": "",
             "required": true,
